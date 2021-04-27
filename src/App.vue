@@ -1,14 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <a href="javascript:void(0);" @click="$router.pushTopState('/')">Home</a>
+      |
+      <a href="javascript:void(0);" @click="$router.pushTopState('/about')"
+        >About</a
+      >
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style>
+html,
+body {
+  height: auto;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
